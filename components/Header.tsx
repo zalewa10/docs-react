@@ -4,12 +4,13 @@ import React from "react";
 
 type HeaderProps = {
   children: React.ReactNode;
+  className: string;
 };
 
-export default function Header({ children }: HeaderProps) {
+export default function Header({ children, className }: HeaderProps) {
   return (
-    <div className="header">
-      <Link href="/" className="md:flex-1">
+    <div className={`header ${className}`}>
+      <Link href="/">
         <Image
           src="/assets/icons/logo.svg"
           alt="Logo with name"

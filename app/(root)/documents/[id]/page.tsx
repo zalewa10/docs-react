@@ -1,5 +1,9 @@
 import React from "react";
 
 export default function Document() {
-  return <div></div>;
+  return (
+    <div>
+      <p>Udało się przekierować!</p>
+    </div>
+  );
 }
