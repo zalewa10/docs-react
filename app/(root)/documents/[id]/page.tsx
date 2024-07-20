@@ -9,7 +9,7 @@ declare type SearchParamProps = {
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export default async function Document({ params: { id } }: SearchParamProps) {
+const Document = async ({ params: { id } }: SearchParamProps) => {
   const clerkUser = await currentUser();
 
   if (!clerkUser) redirect("/sign-in");
@@ -23,7 +23,9 @@ export default async function Document({ params: { id } }: SearchParamProps) {
 
   return (
     <main className="flex w-full flex-col items-center">
-      <Room />
+      <Room roomId={id} roomMetadata={room.metadata} />
     </main>
   );
-}
+};
+
+export default Document;

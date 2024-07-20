@@ -10,8 +10,6 @@ declare type CollaboratorProps = {
   roomId: string;
   email: string;
   creatorId: string;
-  collaborator: User;
-  user: User;
 };
 
 const Room = ({ roomId, roomMetadata }: CollaboratorProps) => {
