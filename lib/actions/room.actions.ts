@@ -30,7 +30,7 @@ export const createDocument = async ({
 
     const room = await liveblocks.createRoom(roomId, {
       metadata,
-      defaultAccesses: [],
+      defaultAccesses: ["room:write"],
       usersAccesses,
     });
 
@@ -40,3 +40,11 @@ export const createDocument = async ({
     console.error(error);
   }
 };
+
+export const getDocument = async ({
+  roomId,
+  userId,
+}: {
+  roomId: string;
+  userId: string;
+}) => {};
